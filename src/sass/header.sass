@@ -1,0 +1,88 @@
+$slate: #546a79
+$medium-green: #38a14a
+$slate-two: #4e606d
+$charcoal-grey: #38454f
+$pale-orange: #ffa452
+$dark: #25313a
+$orange-red: #fe3824
+$lightish-green: #6fd781
+$medium-blue: #3078c0
+$silver: #cfd8dc
+$white: #e5e5e5
+$white-two: #f4f4f4
+$pinkish-grey: #bfbfbf
+$greyish: #a8a8a8
+$brownish-grey: #6a6a6a
+$black: #030303
+$warm-grey: #898989
+
+@font-face
+  font-family: "Gotham Black"
+  font-size: 45px
+  font-weight: 900
+  src: url("../fonts/GothaProBla.otf")
+@font-face
+  font-family: "Gotham Pro"
+  font-size: 14px
+  font-weight: normal
+  src: url("../fonts/GothaProReg.otf")
+//Для всего документа
+*
+  font-family: "Gotham Pro", sans-serif
+  color: $charcoal-grey
+.container
+  width: 1440px
+  padding: 0 20px
+//Для заголовка
+header
+  margin: 0 auto 67px
+  position: relative
+  border-bottom: solid 1px $white
+.header
+  display: flex
+  height: 113px
+  align-items: center
+  justify-content: space-between
+.header-logo
+  font-family: "Gotham Black", sans-serif
+  color: #1f2121
+  font-size: 20px
+  height: 62px
+  display: flex
+  align-items: center
+.header__icon
+  display: inline-block
+  width: 61px
+  height: 62px
+  border-radius: 50%
+  background: #5fb35f
+  position: relative
+  margin: 0 14px 0 0
+.header__circle
+  width: 46px
+  height: 46px
+  border-radius: 50%
+  position: absolute
+  left: 50%
+  top: 50%
+  margin: -23px 0 0 -23px
+  padding: 9px
+  background: #00521e
+  font-family: "Gotham Black", sans-serif
+  color: #ffffff
+.header__text
+  display: inline-block
+  font-family: "Gotham Black", sans-serif
+.header-navbar
+  display: inline-block
+  font-size: 24px
+  margin: 15px 0 0 143px
+  li
+    margin: 0 20px
+    a
+      color: $charcoal-grey
+.actions
+  font-size: 30px
+  a
+    color: $charcoal-grey
+    margin: 20px

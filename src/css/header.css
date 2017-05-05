@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "Gotham Black";
+  font-size: 45px;
+  font-weight: 900;
+  src: url("../fonts/GothaProBla.otf"); }
+
+@font-face {
+  font-family: "Gotham Pro";
+  font-size: 14px;
+  font-weight: normal;
+  src: url("../fonts/GothaProReg.otf"); }
+
+* {
+  font-family: "Gotham Pro", sans-serif;
+  color: #38454f; }
+
+.container {
+  width: 1440px;
+  padding: 0 20px; }
+
+header {
+  margin: 0 auto 67px;
+  position: relative;
+  border-bottom: solid 1px #e5e5e5; }
+
+.header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 113px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.header-logo {
+  font-family: "Gotham Black", sans-serif;
+  color: #1f2121;
+  font-size: 20px;
+  height: 62px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.header__icon {
+  display: inline-block;
+  width: 61px;
+  height: 62px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #5fb35f;
+  position: relative;
+  margin: 0 14px 0 0; }
+
+.header__circle {
+  width: 46px;
+  height: 46px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -23px 0 0 -23px;
+  padding: 9px;
+  background: #00521e;
+  font-family: "Gotham Black", sans-serif;
+  color: #ffffff; }
+
+.header__text {
+  display: inline-block;
+  font-family: "Gotham Black", sans-serif; }
+
+.header-navbar {
+  display: inline-block;
+  font-size: 24px;
+  margin: 15px 0 0 143px; }
+  .header-navbar li {
+    margin: 0 20px; }
+    .header-navbar li a {
+      color: #38454f; }
+
+.actions {
+  font-size: 30px; }
+  .actions a {
+    color: #38454f;
+    margin: 20px; }

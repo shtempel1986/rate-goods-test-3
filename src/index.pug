@@ -1,0 +1,243 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width")
+        title Rate&Goods test
+        link(rel="stylesheet" href="css/libs.min.css")
+        link(rel="stylesheet" href="css/main.min.css")
+    body
+        header
+            .header.container
+                .header-logo
+                    .header__icon
+                        .header__circle RG
+                    .header__text Rate & Goods
+                nav.header-navbar
+                    ul.header-nav.list-unstyled.list-inline
+                        li
+                            a(href="#").text-uppercase Журнал
+                        li
+                            a(href="#").text-uppercase блог
+                        li
+                            a(href="#").text-uppercase каталог
+                        li
+                            a(href="#").text-uppercase магазин
+                .actions
+                    a(href="#").actions__search
+                        i.fa.fa-search
+                    a(href="#").actions__bookmark
+                        i.fa.fa-bookmark-o
+                    a(href="#").actions__profile
+                        i.fa.fa-user-o
+                    a(href="#").actions__menu
+                        i.fa.fa-align-right
+        main.container
+            .product-summary
+                .gallery
+                    .gallery__item
+                        img(src="http://placehold.it/174x274?text=image")
+                    .gallery-thumbs-container
+                        button.gallery-thumbs__controls_left
+                            i.fa.fa-angle-left
+                        ul.gallery-thumbs.list-unstyled.list-inline
+                            li.gallery-thumbs__item.gallery-thumbs__item1(data-gallery-item="1")
+                                img(src="http://placehold.it/57x57?text=1")
+                            li.gallery-thumbs__item.gallery-thumbs__item2(data-gallery-item="2")
+                                img(src="http://placehold.it/57x57?text=2")
+                            li.gallery-thumbs__item.gallery-thumbs__item3(data-gallery-item="3")
+                                img(src="http://placehold.it/57x57?text=3")
+                            li.gallery-thumbs__item.gallery-thumbs__item4(data-gallery-item="4")
+                                img(src="http://placehold.it/57x57?text=4")
+                            li.gallery-thumbs__item.gallery-thumbs__item5(data-gallery-item="5")
+                                img(src="http://placehold.it/57x57?text=5")
+                            li.gallery-thumbs__item.gallery-thumbs__item6(data-gallery-item="6")
+                                img(src="http://placehold.it/57x57?text=6")
+                            li.gallery-thumbs__item.gallery-thumbs__item7(data-gallery-item="7")
+                                img(src="http://placehold.it/57x57?text=7")
+                            li.gallery-thumbs__item.gallery-thumbs__item8(data-gallery-item="8")
+                                img(src="http://placehold.it/57x57?text=8")
+                            li.gallery-thumbs__item.gallery-thumbs__item9(data-gallery-item="9")
+                                img(src="http://placehold.it/57x57?text=9")
+                            li.gallery-thumbs__item.gallery-thumbs__item0(data-gallery-item="0")
+                                img(src="http://placehold.it/57x57?text=10")
+                        button.gallery-thumbs__controls_right
+                            i.fa.fa-angle-right
+                .product-content
+                    h1.content__heading Кофе LavAzza Gran Aroma Bar
+                    .content-average-rating
+                        .content-average-rating__rate
+                            - for (var i = 0; i < 5; i++){
+                                i.fa.fa-star.rating.rating_active
+                            - }
+                        .content__reviews-counts.text-uppercase 170 оценок / 65 отзывов
+                    .content-overview
+                        .content-overview__price
+                            .price.text-uppercase цена
+                            .price__spread 450 до 520
+                            .price__link
+                                i.fa.fa-chevron-right
+                        .content-overview__item
+                            .content-overview__item-caption.text-uppercase штрихкод
+                                .content-overview__item-filler.filler
+                            .content-overview__item-value 4600985654321
+                        .content-overview__item
+                            .content-overview__item-caption.text-uppercase производитель
+                                .content-overview__item-filler.filler
+                            .content-overview__item-value LAVAZZA
+                        .content-overview__item
+                            .content-overview__item-caption.text-uppercase Страна
+                                .content-overview__item-filler.filler
+                            .content-overview__item-value ITAL
+                    .content-ratings
+                        .ratings-five.ratings
+                            - for (var i = 0; i < 5; i++){
+                                i.fa.fa-star.rating.rating_active
+                            - }
+                            .rating-bar__bg
+                                .rating-bar__active.rating-bar-five
+                            .ratings__value 235
+                        .ratings-four.ratings
+                            - for (var i = 0; i < 4; i++){
+                                i.fa.fa-star.rating.rating_active
+                            - }
+                            i.fa.fa-star.rating
+                            .rating-bar__bg
+                                .rating-bar__active.rating-bar-four
+                            .ratings__value 56
+                        .ratings-three.ratings
+                            - for (var i = 0; i < 3; i++){
+                            i.fa.fa-star.rating.rating_active
+                            - }
+                            i.fa.fa-star.rating
+                            i.fa.fa-star.rating
+                            .rating-bar__bg
+                                .rating-bar__active.rating-bar-three
+                            .ratings__value 31
+                        .ratings-two.ratings
+                            i.fa.fa-star.rating.rating_active
+                            i.fa.fa-star.rating.rating_active
+                            - for (var i = 0; i < 3; i++){
+                                i.fa.fa-star.rating
+                            - }
+                            .rating-bar__bg
+                                .rating-bar__active.rating-bar-two
+                            .ratings__value 0
+                        .ratings-one.ratings
+                            i.fa.fa-star.rating.rating_active
+                            - for (var i = 0; i < 4; i++){
+                            i.fa.fa-star.rating
+                            - }
+                            .rating-bar__bg
+                                .rating-bar__active.rating-bar-one
+                            .ratings__value 17
+            .product-sticker
+                .sticker-tabs
+                    ul.sticker-tabs__list.list-inline.list-unstyled
+                        li.sticker-tabs__item
+                            .sticker-tabs__link.sticker-tabs__link_active.text-uppercase описание
+                        li.sticker-tabs__item
+                            a(href="#").sticker-tabs__link ОТЗЫВЫ (3)
+                .sticker-content
+                    .sticker-description
+                        .sticker-description__blacklist
+                            h3.blacklist__heading В черном списке
+                                img(src="http://placehold.it/35x35?text=blacklist").blacklist__icon
+                                .blacklist__text ПРОВЕРЕНО В «РОСКОНТРОЛЕ»
+                        .sticker-description-item
+                            .sticker-description-item__percentage 85
+                            .sticker-description-item__text Безопасность
+                                .sticker-description-item__bar
+                                    .sticker-description-item__bar_active.safety
+                        .sticker-description-item
+                            .sticker-description-item__percentage 67
+                            .sticker-description-item__text Натуральность
+                                .sticker-description-item__bar
+                                    .sticker-description-item__bar_active.nature
+                        .sticker-description-item
+                            .sticker-description-item__percentage 90
+                            .sticker-description-item__text Полезность
+                                .sticker-description-item__bar
+                                    .sticker-description-item__bar_active.good
+                        .sticker-description-item
+                            .sticker-description-item__percentage 0
+                            .sticker-description-item__text Дегустация
+                                .sticker-description-item__bar
+                                    .sticker-description-item__bar_active.degustation
+                    .sticker-goods.goods
+                        h3.goods__heading Достоинства
+                        ul.goods-list
+                            li.goods-list__item
+                                span Безопасный и без растительных жиров
+                            li.goods-list__item
+                                span Натуральный
+                            li.goods-list__item
+                                span Вкусный
+                            li.goods-list__item
+                                span Без консервантов
+                    .sticker-limitations.limitations
+                        h3.limitations__heading Недостатки
+                        ul.limitations-list
+                            li.sticker-limitations-list__item
+                                soan Увеличенный срок годности посравнению с рекомендуемым
+                    .stiker-blacklist-info.blacklist-info
+
+                        h3.blacklist-info__heading Товар в черном списике
+                            .blacklist-info__icon !
+                        .blacklist-info__text Содержание белка меньше, чем предусмотрено для сервелата ГОСТом. Требования ТУ неизвестны.
+                        .blacklist-info__danger Степень опасности: Средняя
+                        .blacklist-info__danger-rating
+                            .danger-bar.danger-bar_active
+                            .danger-bar.danger-bar_active
+                            .danger-bar
+                            .danger-bar
+
+            .product-info.info
+                h4.info-partner
+                    img(src="img/gs-1-us.svg").info-partner__icon
+                    |Информационный партнер
+                h4.info-kosher
+                    img(src="http://placehold.it/30x30?text=kosher").info-kosher__icon
+                    |Сертификат кошерности
+                .info-properties.properties
+                    h3.properties__heading Свойства товара
+                    .properties-item
+                        .properties-item__caption СОСТАВ
+                            .properties-item__line.filler
+                        .properties-item__content
+                            |100% натуральный кофе
+                            br
+                            |40% Арабика
+                            br
+                            |60% Робуста
+                            br
+                            |Среднеобжаренный кофе
+                    .properties-item
+                        .properties-item__caption ОПИСАНИЕ
+                            .properties-item__line.filler
+                        .properties-item__content Кофе натуральный, жареный, высший сорт в зернах, в/у.
+                .info-characteristics.characteristics
+                    h3.characteristics__heading Характеристики
+                    .characteristics-item
+                        .characteristics-item__caption МАССА НЕТТО
+                            .characteristics-item__line.filler
+                        .characteristics-item__content 1 000г.
+                    .characteristics-item
+                        .characteristics-item__caption В УПАКОВКЕ
+                            .characteristics-item__line.filler
+                        .characteristics-item__content 155×85×270 мм (Д×Ш×В)
+                    .characteristics-item
+                        .characteristics-item__caption ТИП ПРОДУКТА
+                            .characteristics-item__line.filler
+                        .characteristics-item__content В зернах
+                    .characteristics-item
+                        .characteristics-item__caption УПАКОВКА
+                            .characteristics-item__line.filler
+                        .characteristics-item__content Пакет
+            .ad-large.ad
+                img(src="http://placehold.it/303x486?text=ad-large")
+            .ad-small.ad
+                img(src="http://placehold.it/316x111?text=ad-small")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="js/libs.min.js")
+    script(src="js/main.js")
