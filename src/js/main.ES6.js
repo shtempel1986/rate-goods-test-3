@@ -39,4 +39,31 @@ $(document).ready(() => {
         setClasses($galleryItems);
         setTimeout(()=>{$zeroItem.show()}, 100);
     });
+
+    //для анимации отображения и исчезновения контента
+    let $buttonSticker = $("#sticker-show"), $buttonReviews = $("#reviews-show"),
+        $productCard = $(".gallery, .content-overview, .content-ratings"),
+        $productInfo = $(".sticker-content, .product-info, .ad"),
+        $productReviews = $(".reviews").removeClass("hidden").hide();
+    console.log($productReviews);
+
+    $buttonSticker.attr("disabled","disabled").click(function () {
+        $(this).toggleClass("sticker-tabs__link_active").attr("disabled","disabled");
+        $buttonReviews.removeAttr("disabled").toggleClass("sticker-tabs__link_active");
+        $productCard.show(500);
+        setTimeout(()=>{
+            $productInfo.fadeToggle(500);
+            $productReviews.fadeToggle(500);
+        }, 500)
+    });
+
+    $buttonReviews.click(function () {
+        $(this).toggleClass("sticker-tabs__link_active").attr("disabled","disabled");
+        $buttonSticker.removeAttr("disabled").toggleClass("sticker-tabs__link_active");
+        $productCard.hide(500);
+        setTimeout(()=>{
+            $productInfo.fadeToggle(500);
+            $productReviews.fadeToggle(500);
+        }, 500)
+    });
 });

@@ -72,6 +72,7 @@ main
   height: 99px
   overflow-x: hidden
   overflow-y: auto
+  flex-shrink: 0
   li.gallery-thumbs__item
     cursor: pointer
     width: 57px
@@ -198,6 +199,9 @@ main
   color: $greyish
   position: relative
   display: inline-block
+  background: transparent
+  border: none
+  cursor: pointer !important
   &::after
     content: ""
     width: 2px
@@ -394,6 +398,212 @@ main
   &-small
     right: 0
     bottom: 186px
+//для отзывов
+.btn_green
+  font-size: 14px
+  line-height: 1.71
+  color: #ffffff
+  border:  none
+  border-radius: 2px
+  background: $medium-green
+//название продукта
+.content__heading
+  margin: 0
+  font-size: 34px
+  color: $charcoal-grey
+  line-height: 1.03
+.fa.rating
+  color: $white
+.fa.rating_active
+  color: $pale-orange
+.content-average-rating
+  display: flex
+  align-items: center
+  margin: 9px 0 34px
+.content-average-rating__rate
+  margin: 0 15px 0 0
+  display: flex
+  align-items: center
+  .fa
+    font-size: 20px
+.content__reviews-counts
+  font-size: 14px
+  line-height: 1.71
+  color: $greyish
+
+//навигация по продукту
+.reviews
+  margin: 0 0 111px
+.reviews-tabs
+  margin: 40px 0 0
+  &-list
+    border-bottom: solid 1px $white
+    li
+      padding: 0
+  &__link
+    padding: 15px 30px
+    color: $greyish
+    position: relative
+    display: inline-block
+    &:hover
+      color: $greyish
+      text-decoration: none
+      &::after
+        position: absolute
+        display: inline-block
+        bottom: 0
+        left: 0
+        content: ""
+        width: 100%
+        height: 5px
+        background: $greyish
+    &_active
+      color: $medium-green
+      &:hover
+        color: $medium-green
+        &::after
+          background: $medium-green
+      &::after
+        position: absolute
+        display: inline-block
+        bottom: 0
+        left: 0
+        content: ""
+        width: 100%
+        height: 5px
+        background: $medium-green
+      &::before
+        content: ""
+        display: inline-block
+        position: absolute
+        width: 2px
+        height: 14px
+        background: $pinkish-grey
+        left: 0
+        top: 19px
+//Заголовок контента
+.reviews-content
+  margin: 70px 0 0
+.reviews__heading
+  font-size: 24px
+.reviews__sort
+  display: inline-block
+  margin: 0 30px
+  padding: 13px 0
+  float: right
+  font-size: 12px
+  letter-spacing: .5px
+  color: $brownish-grey
+  text-transform: uppercase
+  .fa
+    cursor: pointer
+    font-size: 20px
+.reviews__sort-date
+  color: $dark
+  margin: 0 12px
+.reviews__leave-comment
+  float: right
+.reviews__leave-comment
+  padding: 10px 30px
+.reviews__show-more
+  padding: 11px 106px
+// пост
+.post
+  &__heading, .reply__heading
+    padding: 0 0 0 57px
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__user-icon, .reply__user-icon
+    position: absolute
+    border-radius: 50%
+    left: 0
+    top: 0
+  &__user-name
+    color: $slate-two
+    font-size: 16px
+    line-height: 1.5
+  &__user-occupation
+    color: $medium-green
+    font-size: 12px
+.post-socials
+  float: right
+  display: inline-flex
+  &__link
+    display: inline-flex
+    width: 43px
+    height: 43px
+    border: solid 1px $warm-grey
+    border-radius: 50%
+    align-items: center
+    justify-content: space-around
+    .fa
+      color: $warm-grey
+      margin: 0
+    &:hover
+      text-decoration: none
+  li.post-socials__etc
+    width: 43px
+    height: 43px
+    display: flex
+    align-items: center
+    justify-content: space-around
+.oval
+  display: inline-block
+  width: 8px
+  height: 8px
+  border: solid 1px $warm-grey
+  border-radius: 50%
+.post-content, .reply-content
+  margin: 20px 0 0
+  &__subject
+    font-size: 18px
+    line-height: 24px
+p
+  font-size: 16px
+  line-height: 24px
+  padding: 0 0 20px
+.post__estimates
+  margin: 0 0 20px
+.fa
+  margin: 0 8px 0 0
+.post__replies-count
+  margin: 0 0 0 12px
+i.replies
+  padding: 0 2px
+  border: solid 1px $charcoal-grey
+  border-radius: 2px
+.post-footer
+  display: flex
+  margin: 0 0 42px
+.post-actions
+  display: flex
+  &__like
+    margin: 0 19px 0
+    cursor: pointer
+  &__reply
+    cursor: pointer
+.post__date
+  color: $warm-grey
+  margin: 0 31px 0 0
+
+.reply
+  padding: 0 0 0 80px
+  &__user-name
+    color: $slate-two
+    margin: 0 5px 0 0
+    line-height: 1.5
+    font-size: 16px
+  &__to-name
+    color: $warm-grey
+    line-height: 1.5
+    font-size: 16px
+
+
+
+
+
 // адаптивность
 @media all and (min-width: 1200px) and (max-width: 1400px)
   .container
@@ -445,6 +655,8 @@ main
       width: 340px
     &-thumbs-container
       width: 429px
+  .content__heading
+    font-size: 24px
   .content-average-rating
     margin: 0 0 10px
   .content-ratings
